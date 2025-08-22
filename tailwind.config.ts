@@ -52,6 +52,25 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				graph: {
+					background: 'hsl(var(--graph-background))',
+					surface: 'hsl(var(--graph-surface))',
+					border: 'hsl(var(--graph-border))'
+				},
+				node: {
+					technology: 'hsl(var(--node-technology))',
+					language: 'hsl(var(--node-language))',
+					framework: 'hsl(var(--node-framework))',
+					tool: 'hsl(var(--node-tool))',
+					concept: 'hsl(var(--node-concept))',
+					default: 'hsl(var(--node-default))',
+					hover: 'hsl(var(--node-hover))',
+					selected: 'hsl(var(--node-selected))'
+				},
+				edge: {
+					default: 'hsl(var(--edge-default))',
+					highlight: 'hsl(var(--edge-highlight))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +103,59 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-in': {
+					'0%': {
+						transform: 'scale(0.3)',
+						opacity: '0'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						opacity: '0.8'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						transform: 'translateX(100%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-node': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'bounce-in': 'bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'slide-in': 'slide-in 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-node': 'var(--gradient-node)'
+			},
+			boxShadow: {
+				'node': 'var(--shadow-node)',
+				'card-elevated': 'var(--shadow-card)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
 			}
 		}
 	},
